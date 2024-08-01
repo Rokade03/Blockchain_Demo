@@ -70,7 +70,7 @@ if a==6969:
                 u1 = User1(amount)
                 block_no = block_no + 1
                 sent = str(block_no)
-                bc.add_block('sent')
+                bc.add_block('sent '+sent)
             else:
                 print("Not Enough Balance")
         elif user1==2:
@@ -80,12 +80,12 @@ if a==6969:
             u1 = User1(total)
             block_no = block_no + 1
             received = str(block_no)
-            bc.add_block('received')
+            bc.add_block('received '+received)
         elif user1==3:
             u1.mined1()
             block_no = block_no + 1
             mined = str(block_no)
-            bc.add_block('mined')
+            bc.add_block('mined '+mined)
         elif user1==4:
             print("You have",+u1.show_balance1(),"Rockcoins\n")
         elif user1==5:
@@ -98,14 +98,3 @@ if a==6969:
 else:
     print("Logging Out...")
     exit()
-
-
-
-# bc.add_block('1')
-# # bc.add_block('B')
-# # bc.add_block('C')
-
-# for block in bc.chain:
-#     print(block.__dict__)
-
-
